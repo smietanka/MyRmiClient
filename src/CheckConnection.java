@@ -17,7 +17,6 @@ public class CheckConnection implements Runnable {
 			try
 			{
 				IMyServer as = (IMyServer)Naming.lookup("rmi://127.0.0.1/myabc");
-				Client.connected = true;
 				asin = 0;
 			}
 			catch(Exception e)
@@ -25,6 +24,7 @@ public class CheckConnection implements Runnable {
 				if(asin == 0)
 				{
 					myClient.WriteLog("Roz³¹czono z serwerem.");
+					myClient.changeConnectButtonText("Po³¹cz");
 				}
 				Client.connected = false;
 				asin++;
