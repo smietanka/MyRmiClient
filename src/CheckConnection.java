@@ -24,6 +24,8 @@ public class CheckConnection implements Runnable {
 				if(asin == 0)
 				{
 					myClient.WriteLog("Roz³¹czono z serwerem.");
+					myClient.hideAllAdminButtons();
+					myClient.changeLoggedAsLabel();
 					myClient.changeConnectButtonText("Po³¹cz");
 				}
 				Client.connected = false;
